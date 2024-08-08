@@ -12,18 +12,18 @@
 ## Execute
 
 En el directorio raíz, en primer lugar ejecutar el comando
-'''bash
+```bash
 make install
-'''
+```
 
 Luego para correr el backend se ejecuta
-'''bash
+```bash
 make start-backend
-'''
+```
 
 Y por último, para le frontend
-'''bash
+```bash
 make start-frontend
-'''
+```
 
 Todo esto debe realizarse en el directorio raíz.
