@@ -1,5 +1,6 @@
 const { findProductById } = require('../services/findProductById');
 const { getAllProducts } = require('../services/getAllProducts');
+const { generateRandomCart } = require('../services/generateRandomCart');
 
 const cartController = {
   getAllProducts: async (req, res, next) => {
@@ -19,6 +20,15 @@ const cartController = {
         return res.status(404).json({ message: 'Product not found' });
       }
       res.json(product);
+    } catch (error) {
+      next(error);
+    }
+  },
+
+  generateRandomCart: async (req, res, next) => {
+    try {
+      const cart = await generateRandomCart();
+      res.json(cart);
     } catch (error) {
       next(error);
     }
